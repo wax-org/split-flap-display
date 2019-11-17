@@ -1,0 +1,49 @@
+* Split-flap display
+
+[[file:images/split-flap-display.jpg]]
+
+Everyone loves split-flap display! They rotate, the create that lovely noise!
+Total win!
+
+The way our crafted displays work is simple. Imagine that you have a list of
+characters =AAA= and your goal is to get =ACE=. You rotate from the beginning.
+So since the first letter is right, there is nothing to do. So it's =0=
+rotations. Now in order to get from =A= to =C= we need to rotate =2= times.
+Because it's =A - B - C=. So now we have =ACC= on the display. You can't rotate
+only letter at specific position, you also rotate all the letters to the right.
+So now, we have to get from =C= to =E=, which is again =2= rotations.
+
+- =AAA=
+- Rotate 0: =AAA=
+- Rotate 2: =ACC=
+- Rotate 2: =ACE=
+
+If would want to convert =CAT= into =DOG=, it would require =1, 13, 27=
+rotations.
+
+** Scala
+
+Your goal is to implement two functions:
+
+- =flap(original: String, rotations: List[Int]): String= - which rotates
+  original string using provided rotations.
+- =calcRotations(original: String, target: String): List[Int]= - which
+  calculates the list of rotations required to get from the =original= string to
+  =target= string.
+
+For your convenience there are tests. Make sure they pass!
+
+- =TimetableSpec=
+- =TimetableProp=
+
+** JavaScript
+
+Your goal is to implement two functions:
+
+- =flap= that takes the =original= string, list of =rotations= to apply and
+  returns the rotated string.
+- =calcRotations= that takes the =original= string, =target= string and
+  calculates the list of rotations required to get from the =original= string to
+  =target= string.
+
+Remember that =node test= is your friend!
