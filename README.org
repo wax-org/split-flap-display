@@ -1,6 +1,10 @@
 * Split-flap display
 
-[[file:images/split-flap-display.jpg]]
+#+BEGIN_HTML
+<p align="center">
+  <img src="images/split-flap-display.jpg" width="100%"/>
+</p>
+#+END_HTML
 
 Everyone loves split-flap display! They rotate, the create that lovely noise!
 Total win!
