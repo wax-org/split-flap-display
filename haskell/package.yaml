@@ -1,0 +1,36 @@
+name:                split-flap-display
+version:             0.1.0.0
+git:                 "https://gitlab.com/wax-org/split-flap-display"
+license:             BSD3
+author:              "Boris Buliga"
+maintainer:          "boris@d12frosted.io"
+copyright:           "2019 Boris Buliga"
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Development
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/d12frosted/split-flap-display#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  split-flap-display-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - split-flap-display
+    - tasty
+    - tasty-hunit
+    - tasty-quickcheck

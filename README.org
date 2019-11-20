@@ -51,3 +51,14 @@ Your goal is to implement two functions:
   =target= string.
 
 Remember that =node test= is your friend!
+
+** Haskell
+
+Your goal is to implement two functions:
+
+- =flap= of type =String -> [Int] -> String=, which rotates original string using
+  provided rotations.
+- =rotations= of type =String -> String -> [Int]=, which calculates the list of
+  rotations required to get from the =original= string to =target= string.
+
+Remember that =stack test= is your friend!
