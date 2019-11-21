@@ -72,7 +72,7 @@ data FlapData = FlapData
  } deriving (Show, Eq)
 
 instance Arbitrary FlapData where
-  arbitrary = QC.sized $ \n -> FlapData <$> strGen n <*> strGen n
-    where strGen n = QC.vectorOf n (QC.elements alphabet)
+  arbitrary = sized $ \n -> FlapData <$> strGen n <*> strGen n
+    where strGen n = vectorOf n (elements alphabet)
 
 --------------------------------------------------------------------------------
