@@ -7,7 +7,7 @@ object TimetableProp extends Properties("Timetable") {
 
   case class Input(display: String, flapped: String)
 
-  property("startsWith") = forAll { (input: Input) =>
+  property("flap input (rotations input target) == target") = forAll { (input: Input) =>
     Timetable.flap(input.display, Timetable.calcRotations(input.display, input.flapped)) == input.flapped
   }
 
