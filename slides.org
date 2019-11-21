@@ -1,0 +1,63 @@
+#+TITLE: Split-flap display event
+#+AUTHOR: Valentyn Vakatsiienko, Iurii Makhno, Boris Buliga
+#+EMAIL: borysb@wix.com
+#+STARTUP: beamer
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation,aspectratio=169,smaller]
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage{soul}
+#+LATEX_HEADER: \usepackage{unicode-math}
+#+LATEX_HEADER: \usepackage{mathtools}
+#+LATEX_HEADER: \usepackage[mathletters]{ucs}
+#+LATEX_HEADER: \usemintedstyle{tango}
+#+LATEX_HEADER: \setminted{fontsize=\scriptsize}
+#+LATEX_HEADER: \setminted{mathescape=true}
+#+LATEX_HEADER: \setbeamertemplate{itemize items}[circle]
+#+LATEX_HEADER: \setbeamertemplate{enumerate items}[default]
+#+LATEX_HEADER: \setlength{\parskip}{\baselineskip}%
+#+LATEX_HEADER: \setlength{\parindent}{0pt}%
+#+LATEX_HEADER: \setbeamertemplate{navigation symbols}{}%remove navigation symbols
+#+LATEX_HEADER: \newcommand{\hlyellow}[1]{\colorbox{yellow!50}{$\displaystyle#1$}}
+#+LATEX_HEADER: \newcommand{\hlfancy}[2]{\sethlcolor{#1}\hl{#2}}
+#+OPTIONS: H:2 toc:nil num:t
+
+* Intro
+
+** Mob programming
+
+1. <1-> One task for team of 3+ people.
+2. <2-> Roles:
+   1. 1 driver who writes the code, but doesn't think.
+   2. 1 navigator who commands the driver.
+   3. Mob who proposes solution to navigator.
+3. <3-> Stress is good, so roles rotate every 5 minutes.
+
+* Task
+
+** Split-flap
+
+[[file:images/split-flap-display.jpg]]
+
+** Task
+
+Implement two functions:
+
+- =flap(original: String, rotations: List[Int]): String= - which rotates
+  original string using provided rotations.
+- =calcRotations(original: String, target: String): List[Int]= - which
+  calculates the list of rotations required to get from the original string to
+  target string.
+
+#+BEAMER: \pause
+
+Tests are your friends.
+
+#+BEAMER: \pause
+
+Languages: Scala, JavaScript, +Haskell+ (if you can find a team).
+
+** Let's do some flapping
+
+1. https://gitlab.com/wax-org/split-flap-display
+2. =git clone https://gitlab.com/wax-org/split-flap-display.git=
+3. Have fun!
